@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录并授权</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3" style="border: 2px solid #ddd; border-radius: 10px;margin-top: 100px">
+            <form style="margin: 10%;" method="post">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">密码</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                </div>
+                <p>
+                    你确定要授权{{ request.args['callbackurl'] }}网站获取你的个人信息吗?
+                </p>
+                <button type="submit" class="btn btn-default center-block">登录并确认授权</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户端主页</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="margin-top: 100px;">
+            <h1>Hello, world!</h1>
+                <p>This is a Demo for OAuth 2.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It's client.</p>
+            <p><a class="btn btn-primary btn-lg" role="button" href="{{ url_for('login_third_party') }}">第三方登录</a></p>
+        </div>
+    </div>
+</body>
+</html>
